@@ -3,7 +3,11 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCardModule, MatDialogModule, MatSnackBarModule, MatTableModule, MatTooltipModule} from '@angular/material';
+import {
+  MatButtonModule, MatCardModule, MatDialogModule, MatIconModule, MatMenuModule, MatSidenavModule, MatSnackBarModule, MatTableModule,
+  MatToolbarModule,
+  MatTooltipModule
+} from '@angular/material';
 import {DialogDemoComponent} from './dialog-demo/dialog-demo.component';
 import {MyDialogComponent} from './my-dialog/my-dialog.component';
 import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
@@ -11,6 +15,9 @@ import { SnackbarDemoComponent } from './snackbar-demo/snackbar-demo.component';
 import { UsertableComponent } from './components/usertable/usertable.component';
 import {HttpClientModule} from '@angular/common/http';
 import {UserService} from './services/user.service';
+import { MenudemoComponent } from './menudemo/menudemo.component';
+import { SidenavdemoComponent } from './sidenavdemo/sidenavdemo.component';
+import { ToolbardemoComponent } from './toolbardemo/toolbardemo.component';
 
 
 @NgModule({
@@ -20,7 +27,10 @@ import {UserService} from './services/user.service';
     MyDialogComponent,
     TooltipDemoComponent,
     SnackbarDemoComponent,
-    UsertableComponent
+    UsertableComponent,
+    MenudemoComponent,
+    SidenavdemoComponent,
+    ToolbardemoComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +41,11 @@ import {UserService} from './services/user.service';
     MatTooltipModule,
     MatSnackBarModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule
   ],
   providers: [UserService],
   entryComponents: [MyDialogComponent],
