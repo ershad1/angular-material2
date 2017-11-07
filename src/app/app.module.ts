@@ -4,7 +4,9 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  MatButtonModule, MatCardModule, MatDialogModule, MatIconModule, MatMenuModule, MatSidenavModule, MatSnackBarModule, MatTableModule,
+  MatButtonModule, MatCardModule, MatDialogModule, MatIconModule, MatInputModule, MatMenuModule, MatSidenavModule, MatSnackBarModule,
+  MatStepperModule,
+  MatTableModule,
   MatToolbarModule,
   MatTooltipModule
 } from '@angular/material';
@@ -18,6 +20,10 @@ import {UserService} from './services/user.service';
 import { MenudemoComponent } from './menudemo/menudemo.component';
 import { SidenavdemoComponent } from './sidenavdemo/sidenavdemo.component';
 import { ToolbardemoComponent } from './toolbardemo/toolbardemo.component';
+import { StepperDemoComponent } from './stepper-demo/stepper-demo.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MyStepperComponent } from './stepper/my-stepper/my-stepper.component';
+import { StepperDialogComponent } from './stepper/stepper-dialog/stepper-dialog.component';
 
 
 @NgModule({
@@ -30,7 +36,10 @@ import { ToolbardemoComponent } from './toolbardemo/toolbardemo.component';
     UsertableComponent,
     MenudemoComponent,
     SidenavdemoComponent,
-    ToolbardemoComponent
+    ToolbardemoComponent,
+    StepperDemoComponent,
+    MyStepperComponent,
+    StepperDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,10 +54,14 @@ import { ToolbardemoComponent } from './toolbardemo/toolbardemo.component';
     MatMenuModule,
     MatIconModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [UserService],
-  entryComponents: [MyDialogComponent],
+  entryComponents: [MyDialogComponent, StepperDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
